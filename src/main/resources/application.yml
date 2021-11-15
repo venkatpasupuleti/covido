@@ -3,10 +3,10 @@ server:
 spring:  application:    name: covido  
   mvc:    view:
       prefix: /      suffix: .html
-  #datasource:  #  driver-class-name: com.mysql.cj.jdbc.Driver
-  #  url: jdbc:mysql://localhost:3306/covidodb
-  #  username: root
-  #  password: root
+  datasource:    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/covidodb
+    username: root
+    password: root
   jpa:    generate-ddl: true
     show-sql: true    
     hibernate:      ddl-auto: update
