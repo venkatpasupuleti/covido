@@ -34,7 +34,7 @@ spec:
       volumes:
         - name: covidodbvolume
           persistentVolumeClaim:
-            name: covidopvc                             
+            claimName: covidopvc                             
 
 
 
