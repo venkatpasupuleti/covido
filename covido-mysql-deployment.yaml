@@ -31,10 +31,10 @@ spec:
           volumeMounts:
             - name: covidodbvolume
               mountPath: /var/lib/mysql
-    volumes:
-      - name: covidodbvolume
-        persistentVolumeClaim:
-          name: covidopvc                             
+      volumes:
+        - name: covidodbvolume
+          persistentVolumeClaim:
+            name: covidopvc                             
 
 
 
