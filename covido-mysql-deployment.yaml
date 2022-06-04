@@ -27,7 +27,7 @@ spec:
               valueFrom:
                 secretKeyRef:
                   name: covidomysqlsecret
-                  key: covidomysqlsecret
+                  key: password
           volumeMounts:
             - name: covidodbvolume
               mountPath: /var/lib/mysql
