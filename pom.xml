@@ -57,6 +57,7 @@
 	</dependencies>
 
 	<build>
+		<finalName>covido</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

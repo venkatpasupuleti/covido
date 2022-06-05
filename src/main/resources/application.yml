@@ -9,7 +9,7 @@ spring:
       suffix: .html
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://covidoservicedb:3306/covidodb
+    url: jdbc:mysql://localhost:3306/covidodb
     username: root
     password: root
   jpa:

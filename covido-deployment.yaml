@@ -44,17 +44,17 @@ spec:
                   key: password
           readinessProbe:
             httpGet:
-              path: /covido-1.0/actuator/health/readiness
+              path: /covido/actuator/health/readiness
               port: 8080
-            initialDelaySeconds: 5
-            timeoutSeconds: 5     
+            initialDelaySeconds: 15
+            timeoutSeconds: 25     
             failureThreshold: 3
           livenessProbe:
             httpGet:
-              path: /covido-1.0/actuator/health/liveness
+              path: /covido/actuator/health/liveness
               port: 8080
-            initialDelaySeconds: 5
-            timeoutSeconds: 5
+            initialDelaySeconds: 15
+            timeoutSeconds: 25
             failureThreshold: 3
           resources:
             requests:

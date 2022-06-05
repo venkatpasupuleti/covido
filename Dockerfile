@@ -20,7 +20,7 @@ RUN rm openjdk-11.0.1_linux-x64_bin.tar.gz
 RUN rm apache-tomcat-9.0.63.tar.gz
 
 COPY . ./covido
-COPY target/covido-1.0.war ${TOMCAT_HOME}/webapps
+COPY target/covido.war ${TOMCAT_HOME}/webapps
 COPY run.sh .
 RUN chmod u+x run.sh
 ENTRYPOINT [ "./run.sh" ]
