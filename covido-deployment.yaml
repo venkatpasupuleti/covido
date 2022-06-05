@@ -1,0 +1,73 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: covidodeployment
+  labels:
+    app: covido
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: covido
+  template:
+    metadata:
+      labels:
+        app: covido
+    spec:
+      containers:
+        - name: covidocontainer
+          image: techsriman/covido:1.0
+          ports:
+            - name: covidoport
+              containerPort: 8080
+              protocol: TCP
+          env:
+            - name: spring.datasource.driver-class-name
+              valueFrom:
+                configMapKeyRef:
+                  name: covidoconfigmap
+                  key: driverClassname
+            - name: spring.datasource.url
+              valueFrom:
+                configMapKeyRef:
+                  name: covidoconfigmap
+                  key: url
+            - name: spring.datasource.username
+              valueFrom:
+                secretKeyRef:
+                  name: covidomysqlsecret
+                  key: username            
+            - name: spring.datasource.password
+              valueFrom:
+                secretKeyRef:
+                  name: covidomysqlsecret
+                  key: password
+          readinessProbe:
+            httpGet:
+              path: /covido-1.0/actuator/health/readiness
+              port: 8080
+            initialDelaySeconds: 5
+            timeoutSeconds: 5     
+            failureThreshold: 3
+          livenessProbe:
+            httpGet:
+              path: /covido-1.0/actuator/health/liveness
+              port: 8080
+            initialDelaySeconds: 5
+            timeoutSeconds: 5
+            failureThreshold: 3
+          resources:
+            request:
+              cpu: "500Mi"
+              memory: "512m"
+            limits:
+              cpu: "1000Mi"
+              memory: "1024m"
+
+
+
+
+
+
+
+
