@@ -4,5 +4,5 @@ metadata:
   name: covidoconfigmap
 data:
   driverClassname: "com.mysql.cj.jdbc.Driver"
-  url: "jdbc:mysql://covidodb:3306/covidodb"
+  url: "jdbc:mysql://covidoservicedb:3306/covidodb"
   show-sql: "true"
