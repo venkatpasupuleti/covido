@@ -22,22 +22,22 @@ spec:
               containerPort: 8080
               protocol: TCP
           env:
-            - name: spring.datasource.driver-class-name
+            - name: spring_datasource_driver-class-name
               valueFrom:
                 configMapKeyRef:
                   name: covidoconfigmap
                   key: driverClassname
-            - name: spring.datasource.url
+            - name: spring_datasource_url
               valueFrom:
                 configMapKeyRef:
                   name: covidoconfigmap
                   key: url
-            - name: spring.datasource.username
+            - name: spring_datasource_username
               valueFrom:
                 secretKeyRef:
                   name: covidomysqlsecret
                   key: username            
-            - name: spring.datasource.password
+            - name: spring_datasource_password
               valueFrom:
                 secretKeyRef:
                   name: covidomysqlsecret
