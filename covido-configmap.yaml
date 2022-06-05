@@ -5,5 +5,4 @@ metadata:
 data:
   driverClassname: com.mysql.cj.jdbc.Driver
   url: "jdbc:mysql://covidodb:3306/covidodb"
-  show-sql: true
-  
+  show-sql: "true"
