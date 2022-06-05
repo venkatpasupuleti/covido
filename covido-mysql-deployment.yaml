@@ -3,17 +3,17 @@ kind: Deployment
 metadata:
   name: covidomysqldep
   labels:
-    app: covidomysqldb
+    app: covidomysqldep
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: covidodb
+      app: covidopoddb
   template:
     metadata:
-      name: covidodb
+      name: covidopoddb
       labels:
-        app: covidodb
+        app: covidopoddb
     spec:
       containers:
         - name: mysqlcontainer
