@@ -14,7 +14,7 @@ RUN tar -xzvf apache-tomcat-9.0.63.tar.gz
 RUN apt update -y
 RUN apt install -y curl
 RUN apt install -y mysql-client-8.0
-
+RUN apt install -y net-tools
 
 RUN rm openjdk-11.0.1_linux-x64_bin.tar.gz
 RUN rm apache-tomcat-9.0.63.tar.gz
