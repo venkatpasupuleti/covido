@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: covidocontainer
-          image: techsriman/covido:3.0
+          image: techsriman/covido:4.0
           ports:
             - name: covidoport
               containerPort: 8080
