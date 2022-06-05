@@ -4,7 +4,7 @@ metadata:
   name: covidodb
 spec:
   selector:
-    app: covidomysqldb  
+    app: covidodb  
   ports:
     - protocol: TCP
       port: 3306
