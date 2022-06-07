@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: covidocontainer
-          image: techsriman/covido:4.0
+          image: public.ecr.aws/e1b8q8o4/covido:1.0
           ports:
             - name: covidoport
               containerPort: 8080
